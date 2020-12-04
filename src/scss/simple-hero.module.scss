@@ -6,4 +6,15 @@
   background-size: cover;
   display : flex ; 
   align-items: center;
+  animation: defaultHeroAnimation 1s linear;
+  transition: var(--mainTransition);
+}
+
+@keyframes defaultHeroAnimation{
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

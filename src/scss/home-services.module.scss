@@ -1,0 +1,30 @@
+.services{
+  padding : 4rem 0 ;
+  background-color : var(--mainGrey);  
+}
+
+.services-center{
+  width : 80vw; 
+  margin : 0 auto;
+  display : grid ; 
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-column-gap: 2rem;
+}
+
+.service{
+  margin : 2rem 0;
+  text-align: center;
+  span{
+    display : inline-block;    
+    font-size: 2em;
+    background-color: var(--primaryColor);
+    padding : 0.25rem;   
+  }
+  h4{
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+  }
+  *:not(:last-child){
+    margin-bottom : 1rem;
+  }
+}

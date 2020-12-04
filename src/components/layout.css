@@ -25,6 +25,8 @@ body {
   background-color: var(--mainWhite);
   line-height: 1.4;
   font-size: 1rem;
+  width : 100vw;
+  overflow-x: hidden;
 }
 
 h1,
@@ -40,15 +42,6 @@ h6 {
 
 p{
   margin-bottom: 1.25rem;
-}
-
-.defaultHero {
-  min-height: calc(100vh - 62px);
-  background: linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../images/defaultBcg.jpeg") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .btn-white,
