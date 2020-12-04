@@ -1,0 +1,35 @@
+.footer{
+  background-color : var(--mainBlack);
+  display : flex;
+  color : var(--mainWhite) ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding : 2rem;
+  text-align: center;
+  & a{    
+      display : inline-block ;    
+      margin : 0.5rem 1rem;
+      color : var(--mainWhite);
+      text-decoration: none;
+      padding : 1rem 1.25rem;
+      text-transform: uppercase;  
+      letter-spacing: var(--mainSpacing);
+      transition: var(--mainTransition);
+      font-weight: bold;
+      &:hover {
+        color : var(--primaryColor);     
+    }
+  }
+  .icon{
+    font-size : 1.5em;
+    &:hover{
+      transform: translateY(-5px);
+      color : var(--primaryColor)
+    }
+  }  
+  & > * {
+    margin-bottom : 0.75rem;
+  }
+}
+
