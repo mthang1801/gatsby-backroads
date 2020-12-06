@@ -1,10 +1,15 @@
-import React from 'react'
-
-const BlogPage = () => {
+import React from "react"
+import Layout from "../components/layout"
+import {Link} from "gatsby"
+import Images from "../examples/Images"
+const BlogPage = (props) => {
+  console.log(props)
   return (
-    <h1>
-      Blog page
-    </h1>
+    <Layout>
+      Blog page 
+      <Link to="/">back home</Link>
+      <Images/>
+    </Layout>
   )
 }
 
