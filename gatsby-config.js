@@ -3,7 +3,9 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-
+require("dotenv").config({
+  path : ".env"
+})
 module.exports = {
   /* Your site config here */
   siteMetadata : {
@@ -38,6 +40,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-playground`
   ],
 }

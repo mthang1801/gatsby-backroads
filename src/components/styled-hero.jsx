@@ -1,9 +1,26 @@
 import React from 'react'
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
+import {useStaticQuery, graphql} from "gatsby"
+
+const getImage = graphql`
+  {
+    bgDefault :file(relativePath : {
+      regex : "/defaultBcg.jpeg/"
+    }){
+      childImageSharp{
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
+
 const StyledHero = ({img, className, children, home}) => {
+  const imageData = useStaticQuery(getImage)
   return (
-    <BackgroundImage fluid={img} className={className} home={home}>
+    <BackgroundImage fluid={img || imageData.bgDefault.childImageSharp.fluid} className={className} home={home}>
       {children}
     </BackgroundImage>
   )

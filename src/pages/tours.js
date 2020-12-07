@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Header from "../examples/RegularHeader";
 import StyledHero from "../components/styled-hero"
 import {graphql} from "gatsby"
-
+import Tours from "../components/Tours/tours";
 export const  query = graphql`
   {
     background: file(relativePath: { regex: "/defaultBcg/" }) {
@@ -18,10 +18,8 @@ export const  query = graphql`
 const ToursPage = ({data}) => {
   
   return <Layout>
-    <StyledHero img={data.background.childImageSharp.fluid}/>
-    <Header/>
-    {/* <h1>Title : {title}</h1>
-    <h2>Author : {author}</h2> */}
+    <StyledHero img={data.background.childImageSharp.fluid}/>    
+    <Tours/>
     </Layout>
 }
 

@@ -979,7 +979,7 @@
     "core-js-pure" "^3.0.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@7.12.5":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@7.12.5":
   "integrity" "sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.12.5.tgz"
   "version" "7.12.5"
@@ -6546,6 +6546,15 @@
     "graphql" "^14.7.0"
     "lodash" "^4.17.20"
 
+"gatsby-plugin-playground@^1.0.6":
+  "integrity" "sha512-YaDPi2xz6xbIiouvIikOTzJ8MxcBtGfcgoDEVYYVZ6qe1mSyNOK4h6RPtdtnkCWbP1mDTtH3BJU3pf5Rp1TcPg=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-playground/-/gatsby-plugin-playground-1.0.6.tgz"
+  "version" "1.0.6"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "graphql-playground-middleware-express" "^1.7.8"
+    "lodash" "^4.17.10"
+
 "gatsby-plugin-sass@^2.6.0":
   "integrity" "sha512-xifT2ze4rP8K0gf2iN6wffnYWqTwL9zxqgVuMUkIAGBeOc0vpncBCaooFIyee6pvvcAfKy/6GMKXZmQPPG9uQA=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-sass/-/gatsby-plugin-sass-2.6.0.tgz"
@@ -7318,7 +7327,7 @@
   dependencies:
     "xss" "^1.0.6"
 
-"graphql-playground-middleware-express@^1.7.18":
+"graphql-playground-middleware-express@^1.7.18", "graphql-playground-middleware-express@^1.7.8":
   "integrity" "sha512-PJLiCxLmN6Dp+dHGyHU92m9y3hB/RAkcUBWcqYl2fiP+EbpDDgNfElrsVzW60MhJe+LTV1PFqiInH2d3KNvlCQ=="
   "resolved" "https://registry.npmjs.org/graphql-playground-middleware-express/-/graphql-playground-middleware-express-1.7.22.tgz"
   "version" "1.7.22"
