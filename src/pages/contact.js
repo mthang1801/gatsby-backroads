@@ -1,9 +1,23 @@
 import React from "react"
 import Layout from "../components/layout"
-const ContactPage = () => {
+import StyledHero from "../components/styled-hero"
+import Contact from "../components/Contact/contact"
+export const  query = graphql`
+  {
+    background: file(relativePath: { regex: "/connectBcg/" }) {
+      childImageSharp {
+        fluid(maxWidth: 4160, quality: 90) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
+const ContactPage = ({data}) => {
   return (
     <Layout>
-      <h1>Contact</h1>
+      <StyledHero img={data.background.childImageSharp.fluid}/>
+      <Contact/>
     </Layout>
   )
 }

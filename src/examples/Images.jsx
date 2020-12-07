@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import img from "../images/connectBcg.jpeg"
 import styled from "styled-components"
+import Img from "gatsby-image"
 const getImages = graphql`
   query {
     fixed: file(relativePath: { regex: "/default/" }) {
@@ -13,8 +14,8 @@ const getImages = graphql`
     }
     fluid: file(relativePath: { regex: "/blog/" }) {
       childImageSharp {
-        fluid {          
-          src         
+        fluid (maxWidth:300){          
+          ...GatsbyImageSharpFluid_tracedSVG         
         }
       }
     }
@@ -32,11 +33,16 @@ const Images = () => {
       </article>
       <article>
         <h3>fixed image/blur</h3>
-        <img src={data.fixed.childImageSharp.fixed.src} className="basic"/>
+        <Img fixed={data.fixed.childImageSharp.fixed} objectFit="cover" objectPosition="50% 50%" className="basic"/>
       </article>
       <article>
         <h3>Fluid image/Svg</h3>
-        <img src={data.fluid.childImageSharp.fluid.src} className="basic"/>
+        <Img fluid={data.fluid.childImageSharp.fluid} />
+        <div className="fluid">
+       
+        <Img fluid={data.fluid.childImageSharp.fluid} />
+        </div>
+        
       </article>
     </Wrapper>
   )
@@ -59,6 +65,9 @@ const Wrapper = styled.div`
     display : grid ;
     grid-template-columns : 1fr 1fr 1fr ; 
     grid-column-gap : 1rem;
+  }
+  .fluid{
+    max-width : 200px;
   }
 `
 export default Images

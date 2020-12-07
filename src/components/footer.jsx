@@ -1,19 +1,19 @@
 import React from 'react'
 import links from "../constants/links";
 import socialIcons from "../constants/social-icons";
-import {Link} from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import styles from "../scss/footer.module.scss"
 const Footer = () => {
   return (
     <div className={styles.footer}>
       <div>
       {links.map(({path,name}) => (
-        <Link key={name} to={path}>{name}</Link>
+        <AniLink fade key={name} to={path}>{name}</AniLink>
       ))}
       </div>
       <div>
         {socialIcons.map(({icon,url}) => (
-          <Link key={url} to={url} className={styles.icon}>{icon}</Link>
+          <AniLink fade key={url} to={url} target="_blank" className={styles.icon}>{icon}</AniLink>
         ))}
       </div>
       <p>Copyright @ Backroads Travel Company {new Date().getFullYear()} All Rights Reserved.</p>

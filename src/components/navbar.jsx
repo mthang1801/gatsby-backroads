@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "../scss/navbar.module.scss"
 import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
@@ -13,16 +14,16 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navHeader}>
-        <Link to="/">
+        <AniLink fade to="/">
           <img src={logo} alt="backroad logo" />
-        </Link>
+        </AniLink>
         <button type="button" className={styles.toggleBtn} onClick={toggleNav}>
           <FaAlignRight className={styles.logoIcon} />
         </button>
       </div>
       <ul className={isOpen ? `${styles.navLinks} ${styles.showNav}` : `${styles.navLinks}`}>
         {links.map(link => (
-          <li key={link.name}><Link to={link.path}>{link.name}</Link></li>
+          <li key={link.name}><AniLink fade to={link.path}>{link.name}</AniLink></li>
         ))}
       </ul>
       <div className={styles.navSocialLinks}>
