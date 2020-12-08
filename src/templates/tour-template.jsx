@@ -75,7 +75,7 @@ const TourTemplate = ({ data }) => {
             starts on : <span className={styles.date}>{start}</span>{" "}
           </h4>
           <h4>
-            duration : <span className={styles.date}>{days}</span>{" "}
+            duration : <span className={styles.date}>{days} days</span>{" "}
           </h4>
           <p className={styles.desc}>{description}</p>
           <h2>daily schedule</h2>
