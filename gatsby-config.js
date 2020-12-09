@@ -14,7 +14,7 @@ module.exports = {
     author : "MVT",    
     image : "./hawaii1.jpg",
     twitterUsername : "@mvt",
-    siteUrl : "https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_scrollspy2&stacked=h"
+    siteUrl : "https://epic-bartik-aa2a36.netlify.app"
   },
   plugins: [
     {
