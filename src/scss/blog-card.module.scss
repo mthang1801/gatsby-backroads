@@ -39,8 +39,10 @@
   position :relative; 
   background-color : var(--primaryColor);
   height : 240px;
+  overflow: hidden;
   &:hover{
     .img{           
+      transform: scale(1.2);
       opacity: 0.3;
     }
     .link{
@@ -49,7 +51,7 @@
   }
   .img{
     height : 100%;
-    transition : var(--mainTransition);
+    transition : transform 6s ;
   }
 } 
 

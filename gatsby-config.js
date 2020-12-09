@@ -45,6 +45,15 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
-    `gatsby-plugin-playground`
+    `gatsby-plugin-playground`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve : `gatsby-plugin-robots-txt` ,
+      options: {
+        host: 'https://epic-bartik-aa2a36.netlify.app',
+        sitemap: 'https://epic-bartik-aa2a36.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
   ],
 }
