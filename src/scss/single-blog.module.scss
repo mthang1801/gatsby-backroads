@@ -29,12 +29,13 @@
 .link{
   transition: var(--mainTransition);
 }
-.btn-group{
+.other-links{
   text-align: center;
+  margin : 2rem 0;
 }
 
 @media screen and (min-width : 992px){
-  .btn-group{
+  .other-links{
     text-align: left;
   }
 }

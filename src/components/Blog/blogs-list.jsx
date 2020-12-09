@@ -30,12 +30,19 @@ const BlogsList = () => {
   return (
     <div className={styles.blog}>
       <Title title="Our" subtitle="blogs" />
-      <div className={styles.center}>       
+      <div className={styles.center}>
+        <div className={styles.posts}>
           {posts.edges.map(({ node }) => (
             <BlogCard key={node._id} blog={node} />
-          ))}        
+          ))}
+        </div>
+
+        <div className={styles.otherLinks}>
+          <AniLink className="btn-primary" to="/">
+            back home
+          </AniLink>
+        </div>
       </div>
-      <AniLink className="btn-primary" to="/">back home</AniLink>
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react"
 import { graphql, navigate } from "gatsby"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
 import styles from "../scss/blog.module.scss"
 import BlogCard from "../components/Blog/blog-card"
 import Title from "../components/title"
 import Layout from "../components/layout"
 import BlogPaginate from "../components/Blogs/blog-paginate"
+import StyledHero from "../components/styled-hero"
 export const query = graphql`
   query($limit: Int!, $skip: Int!) {
     blogs: allContentfulBlog(
@@ -42,12 +42,15 @@ const BlogListTemplate = props => {
   }
   return (
     <Layout>
+      <StyledHero />
       <section className={styles.blog}>
         <Title title="latest" subtitle="posts" />
         <div className={styles.center}>
-          {props.data.blogs.edges.map(({ node }) => (
-            <BlogCard key={node.id} blog={node} />
-          ))}
+          <div className={styles.posts}>
+            {props.data.blogs.edges.map(({ node }) => (
+              <BlogCard key={node.id} blog={node} />
+            ))}
+          </div>
         </div>
         <BlogPaginate
           numPages={props.pathContext.numPages}

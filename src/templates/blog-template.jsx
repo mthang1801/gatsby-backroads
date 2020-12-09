@@ -103,7 +103,7 @@ const BlogTemplate = ({ data }) => {
           ))}
           </div>          
         </div>  
-        <div className={styles.btnGroup}>
+        <div className={styles.otherLinks}>
           <Anilink fade to="/blog" className="btn-primary link">All Posts</Anilink>
         </div>       
         
