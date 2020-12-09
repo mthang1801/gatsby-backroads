@@ -10,7 +10,7 @@ const getImage = graphql`
     }){
       childImageSharp{
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp 
         }
       }
     }

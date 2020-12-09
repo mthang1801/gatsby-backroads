@@ -1,0 +1,40 @@
+.blog{
+  padding : 4rem 0; 
+  h1, h4{
+    text-transform: capitalize;
+  }  
+}
+
+.center{
+  width : 80vw; 
+  margin : 2rem auto ; 
+}
+
+.post{
+  margin : 2rem auto;
+}
+
+.img-container{
+  width : 100% ;
+  .image{
+    max-width : 100%;        
+  }
+}
+
+.images{  
+  display : grid ; 
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap : 1rem;
+}
+.link{
+  transition: var(--mainTransition);
+}
+.btn-group{
+  text-align: center;
+}
+
+@media screen and (min-width : 992px){
+  .btn-group{
+    text-align: left;
+  }
+}
