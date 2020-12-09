@@ -7,7 +7,7 @@ export const  query = graphql`
     background: file(relativePath: { regex: "/connectBcg/" }) {
       childImageSharp {
         fluid(maxWidth: 4160, quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

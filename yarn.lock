@@ -11659,6 +11659,13 @@
   "resolved" "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
   "version" "3.0.4"
 
+"react-paginate@^6.5.0":
+  "integrity" "sha512-H7xSi9jyiJzgfaj+2nNhQcjZfwzJ/Mxb64V2RiyDctjZyCWojwsaGwMqhLBpQ58iAuMVtBMRQ7ECqMcUKG9QSQ=="
+  "resolved" "https://registry.npmjs.org/react-paginate/-/react-paginate-6.5.0.tgz"
+  "version" "6.5.0"
+  dependencies:
+    "prop-types" "^15.6.1"
+
 "react-refresh@^0.8.3":
   "integrity" "sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg=="
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
@@ -11674,7 +11681,7 @@
     "prop-types" "^15.6.2"
     "react-lifecycles-compat" "^3.0.4"
 
-"react@*", "react@^16.12.0", "react@^16.8.5", "react@^16.8.6", "react@>= 16.8.0", "react@>=15.0.0", "react@16.x":
+"react@*", "react@^16.0.0", "react@^16.12.0", "react@^16.8.5", "react@^16.8.6", "react@>= 16.8.0", "react@>=15.0.0", "react@16.x":
   "integrity" "sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.13.1.tgz"
   "version" "16.13.1"
