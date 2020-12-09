@@ -8,7 +8,7 @@ import About from "../components/Home/about"
 import Services from "../components/Home/services"
 import StyledHero from "../components/styled-hero"
 import FeaturedTours from "../components/Home/featured-tours"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 export const  query = graphql`
   {
     background: file(relativePath: { regex: "/defaultBcg/" }) {

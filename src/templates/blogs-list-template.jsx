@@ -6,6 +6,7 @@ import Title from "../components/title"
 import Layout from "../components/layout"
 import BlogPaginate from "../components/Blogs/blog-paginate"
 import StyledHero from "../components/styled-hero"
+import SEO from "../components/SEO"
 export const query = graphql`
   query($limit: Int!, $skip: Int!) {
     blogs: allContentfulBlog(
@@ -42,6 +43,7 @@ const BlogListTemplate = props => {
   }
   return (
     <Layout>
+      <SEO title={"Blogs"}/> 
       <StyledHero />
       <section className={styles.blog}>
         <Title title="latest" subtitle="posts" />

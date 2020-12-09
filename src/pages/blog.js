@@ -4,6 +4,7 @@ import {Link} from "gatsby"
 import {graphql} from "gatsby";
 import StyledHero from "../components/styled-hero"
 import BlogList from "../components/Blog/blogs-list"
+import SEO from "../components/SEO"
 export const  query = graphql`
   {
     background: file(relativePath: { regex: "/blogBcg/" }) {
@@ -19,6 +20,7 @@ const BlogPage = ({data}) => {
   
   return (
     <Layout>
+      <SEO title="Blog"/> 
       <StyledHero img={data.background.childImageSharp.fluid}/>
       <BlogList/>            
     </Layout>

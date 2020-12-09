@@ -4,6 +4,7 @@ import Header from "../examples/RegularHeader";
 import StyledHero from "../components/styled-hero"
 import {graphql} from "gatsby"
 import Tours from "../components/Tours/tours";
+import SEO from "../components/SEO"
 export const  query = graphql`
   {
     background: file(relativePath: { regex: "/defaultBcg/" }) {
@@ -18,6 +19,7 @@ export const  query = graphql`
 const ToursPage = ({data}) => {
   
   return <Layout>
+    <SEO title="Tours"/>
     <StyledHero img={data.background.childImageSharp.fluid}/>    
     <Tours/>
     </Layout>

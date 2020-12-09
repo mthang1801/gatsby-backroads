@@ -7,6 +7,7 @@ import styles from "../scss/tour-template.module.scss"
 import Img from "gatsby-image"
 import Day from "../components/SingleTour/day"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import SEO from "../components/SEO"
 export const query = graphql`
   query($slug: String) {
     tour: contentfulTourExplore(slug: { eq: $slug }) {
@@ -44,10 +45,10 @@ const TourTemplate = ({ data }) => {
     images,
   } = data.tour
 
-  const [mainImage, ...tourImages] = images
-  console.log(mainImage, tourImages)
+  const [mainImage, ...tourImages] = images 
   return (
     <Layout>
+      <SEO title="Tours"/>
       <StyledHero img={mainImage.fluid} />
       <section className={styles.template}>
         <div className={styles.center}>

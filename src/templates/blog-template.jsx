@@ -5,8 +5,8 @@ import styles from "../scss/single-blog.module.scss"
 import {graphql } from "gatsby"
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer"
 import StyledHero from "../components/styled-hero";
-import Img from "gatsby-image"
 import BlogCard from "../components/Blog/blog-card"
+import SEO from "../components/SEO"
 export const query = graphql`
   query($slug: String) {
     blog: contentfulBlog(slug: { eq: $slug }) {
@@ -85,9 +85,9 @@ const BlogTemplate = ({ data }) => {
     }
   }
 
-  const otherBlogs = references.filter(({__typename}) => __typename === "ContentfulBlog")
-  console.log(otherBlogs)
+  const otherBlogs = references.filter(({__typename}) => __typename === "ContentfulBlog")  
   return <Layout>
+    <SEO title={title} />
     <StyledHero img={image.fluid}/>
     <section className={styles.blog}>
       <div className={styles.center}>
