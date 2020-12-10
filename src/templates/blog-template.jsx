@@ -105,6 +105,8 @@ const BlogTemplate = ({ data }) => {
           <div className={styles.center}>
             <hr />
             <DiscussionEmbed {...disqusConfig} />
+            <hr/>
+            <h3>Other Blogs</h3>
             <div className={styles.images}>
               {otherBlogs.map(blog => (
                 <BlogCard key={blog.contentful_id} blog={blog} />
