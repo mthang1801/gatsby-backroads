@@ -104,7 +104,7 @@ const BlogTemplate = ({ data }) => {
           </article>
           <div className={styles.center}>
             <hr />
-            <DiscussionEmbed {...disqusConfig} />
+            <DiscussionEmbed {...disqusConfig}  />
             <hr/>
             <h3>Other Blogs</h3>
             <div className={styles.images}>
