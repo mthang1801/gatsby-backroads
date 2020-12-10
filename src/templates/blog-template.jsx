@@ -7,10 +7,13 @@ import {documentToReactComponents} from "@contentful/rich-text-react-renderer"
 import StyledHero from "../components/styled-hero";
 import BlogCard from "../components/Blog/blog-card"
 import SEO from "../components/SEO"
+import { DiscussionEmbed } from "disqus-react"
+
 export const query = graphql`
   query($slug: String) {
     blog: contentfulBlog(slug: { eq: $slug }) {
       title
+      slug
       _id: contentful_id
       simpleText {
         simpleText
@@ -51,12 +54,15 @@ export const query = graphql`
 const BlogTemplate = ({ data }) => {
   const {
     title,
+    slug,
     _id,
     simpleText: { simpleText },
     text: { raw, references },
     image,
     publishedAt,
   } = data.blog;   
+
+
   const options = {
     renderNode : {
       "embedded-asset-block" : node => {                     
@@ -69,23 +75,18 @@ const BlogTemplate = ({ data }) => {
         return <div className={styles.imgContainer}>
            <img src={url} alt={alt} className={styles.image} />
         </div>
-      },
-      // "embedded-entry-block" : node => {                        
-      //   const contentful_id = node.data.target.sys.id ; 
-      //   const res = data.blog.text.references.find(n => n.contentful_id === contentful_id)       
-        
-      //   return (
-      //     <div className={styles.blog}>
-      //       <div className={styles.center}>
-      //         <BlogCard blog={res}/>
-      //       </div>
-      //     </div>
-      //   )
-      // }
+      },      
     }
   }
 
+
   const otherBlogs = references.filter(({__typename}) => __typename === "ContentfulBlog")  
+ 
+  const disqusConfig = {
+    shortname : process.env.GATSBY_DISQUS_NAME,
+    config : { identifier: slug, title}
+  }
+  
   return <Layout>
     <SEO title={title} />
     <StyledHero img={image.fluid}/>
@@ -101,8 +102,10 @@ const BlogTemplate = ({ data }) => {
           {otherBlogs.map(blog => (
             <BlogCard key={blog.contentful_id} blog={blog}/>
           ))}
-          </div>          
-        </div>  
+          </div>   
+          <hr/>       
+          <DiscussionEmbed {...disqusConfig}/>
+        </div>          
         <div className={styles.otherLinks}>
           <Anilink fade to="/blog" className="btn-primary link">All Posts</Anilink>
         </div>       
