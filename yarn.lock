@@ -6579,6 +6579,11 @@
     "lodash" "^4.17.20"
     "micromatch" "^4.0.2"
 
+"gatsby-plugin-disqus@^1.2.2":
+  "integrity" "sha512-RWiU8Jtg94kVphjBnxqnF+0txyJ3eZN/9vw/VlMgz0mor1FwULkiiiOyNXAJxbX6tFqYmypnmfa+edQWX/rMpQ=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-disqus/-/gatsby-plugin-disqus-1.2.2.tgz"
+  "version" "1.2.2"
+
 "gatsby-plugin-page-creator@^2.4.0":
   "integrity" "sha512-lE6H++qSz2ZFbc+9TMfpz1i6jLdGVBxUYE7KY2ohNJb4POJF9wm4XfTwKLQsFNlQzH7GCKMIi3QqWhuNOgH2WQ=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.4.0.tgz"
